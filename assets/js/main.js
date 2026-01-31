@@ -49,7 +49,9 @@ function criaCalculadora(){
                 return;
             }
 
-            conta = Number(resultado.toFixed(2));
+            const resultadoFormatado = Number(resultado.toFixed(2));
+
+            this.display.value = resultadoFormatado
 
         },
 
