@@ -91,27 +91,6 @@ function criaCalculadora(){
         },
 
         btnParaDisplay(valor) {
-            const ultimoChar = this.display.value.slice(-1);
-            const operadores = ['+', '-', '*', '/'];
-
-            // Permite **
-            if (valor === '*' && ultimoChar === '*') {
-                this.display.value += valor;
-                return;
-            }
-
-            if (operadores.includes(valor) && operadores.includes(ultimoChar)) {
-                return;
-            }
-
-            if (valor === ',') {
-                const ultimoNumero = this.display.value
-                    .split(/[+\-*/]/)
-                    .pop();
-
-                if (ultimoNumero.includes(',')) return;
-            }
-
             this.display.value += valor;
         }
     }
